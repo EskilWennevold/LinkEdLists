@@ -2,7 +2,8 @@ package com.company;
 
 public class ListNode {
     private Player data;
-    public ListNode next;
+    private ListNode next;
+
 
     public ListNode(Player player){
         this(player, null);
@@ -13,13 +14,25 @@ public class ListNode {
         this.next = next;
     }
 
-    public Player getPlayer() {
+    public Player getData() {
         return data;
     }
 
-    public void setPlayer(Player player) {
+    public void setData(Player player) {
         this.data = player;
     }
 
+    public ListNode getNext() {
+        return next;
+    }
+
+    public void setNext(ListNode next) {
+        this.next = next;
+    }
+
+    public String toString() {
+        return data.toString();
+
+    }
 
 }

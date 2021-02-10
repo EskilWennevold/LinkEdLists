@@ -42,6 +42,6 @@ public class Player {
     }
     //ToString
     public String toString() {
-        return("First name: " + fname + "\nLast name: " + lname + "\nAge: " + age + "\nTeam: " + team);
+        return("First name: " + fname + "\nLast name: " + lname + "\nAge: " + age + "\nTeam: " + team +"\n");
     }
 }

@@ -7,6 +7,9 @@ public class Main {
     public static void main(String[] args) {
         MyLinkedList list = new MyLinkedList();
         Scanner scan = new Scanner(System.in);
+        mainMenu(scan, list);
+    }
+    public static void mainMenu(Scanner scan, MyLinkedList list){
 
         int svar = 1;
 
@@ -24,30 +27,30 @@ public class Main {
             svar = scan.nextInt();
 
             switch (svar){
-                case 0:
-                    System.out.println("Ending program");
-                    break;
-                case 1:
-                    createPlayer(scan, list);
-                    break;
-                case 2:
-                    listAllPlayers();
-                    break;
-                case 3:
-                    searchPlayers();
-                    break;
-                case 4:
-                    deletePlayer();
-                    break;
-                case 5:
-                    search1Team();
-                    break;
-                case 6:
-                    search2Team();
-                    break;
-                case 7:
-                    searchInterval();
-                    break;
+            case 0:
+                System.out.println("Ending program");
+                break;
+            case 1:
+                createPlayer(scan, list);
+                break;
+            case 2:
+                listAllPlayers(list);
+                break;
+            case 3:
+                searchPlayers();
+                break;
+            case 4:
+                deletePlayer();
+                break;
+            case 5:
+                search1Team();
+                break;
+            case 6:
+                search2Team();
+                break;
+            case 7:
+                searchInterval();
+                break;
 
             }
         }
@@ -68,10 +71,9 @@ public class Main {
 
         Player p = new Player(f,l,a,t);
         list.add(p);
-        System.out.println(list);
-
     }
-    public static void listAllPlayers(){
+    public static void listAllPlayers(MyLinkedList list){
+        System.out.println(list);
 
     }
     public static void searchPlayers(){

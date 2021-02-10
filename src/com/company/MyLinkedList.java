@@ -13,10 +13,10 @@ public class MyLinkedList {
             front = new ListNode(player);
         } else {
             ListNode current = front;
-            while(current.next != null){
-                current = current.next;
+            while(current.getNext() != null){
+                current = current.getNext();
             }
-            current.next = new ListNode(player);
+            current.setNext(new ListNode(player));
         }
 
     }
@@ -25,9 +25,18 @@ public class MyLinkedList {
         if(front == null){
             return "[]";
         } else {
-            Player result = "[" + front.data.toString();
-            ListNode current = front.next;
+            String result ="[" + front.toString();
+            ListNode current = front.getNext();
+            while(current != null){
+                result += current.toString();
+                current = current.getNext();
+            }
+            result += "]";
+            return result;
         }
+
     }
+
+
 
 }
