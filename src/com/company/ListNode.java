@@ -2,7 +2,7 @@ package com.company;
 
 public class ListNode {
     private Player data;
-    private ListNode next;
+    public ListNode next;
 
 
     public ListNode(Player player){

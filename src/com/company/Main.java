@@ -34,13 +34,14 @@ public class Main {
                 createPlayer(scan, list);
                 break;
             case 2:
-                listAllPlayers(list);
+                list.getPlayers();
                 break;
             case 3:
+
                 searchPlayers();
                 break;
             case 4:
-                deletePlayer();
+                deletePlayer(scan, list);
                 break;
             case 5:
                 search1Team();
@@ -72,14 +73,14 @@ public class Main {
         Player p = new Player(f,l,a,t);
         list.add(p);
     }
-    public static void listAllPlayers(MyLinkedList list){
-        System.out.println(list);
 
-    }
     public static void searchPlayers(){
 
     }
-    public static void deletePlayer(){
+    public static void deletePlayer(Scanner scan, MyLinkedList list){
+        System.out.println("Type in the first name of the player you want to delete:");
+        String f = scan.next();
+        list.remove(f);
 
     }
     public static void search1Team(){

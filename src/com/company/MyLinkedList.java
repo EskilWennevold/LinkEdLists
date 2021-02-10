@@ -7,6 +7,15 @@ public class MyLinkedList {
     public MyLinkedList(){
         front = null;
     }
+    public void getPlayers(){
+        ListNode current = front;
+        System.out.println(front.getData().getFname() + " " + front.getData().getLname());
+        while(current.next != null){
+            System.out.println(current.next.getData().getFname() + " " + current.next.getData().getLname());
+            current = current.next;
+        }
+    }
+
 
     public void add(Player player){
         if(front == null){
@@ -18,9 +27,24 @@ public class MyLinkedList {
             }
             current.setNext(new ListNode(player));
         }
-
     }
-
+    public void remove(String name){
+        if(front != null) {
+            ListNode current = front;
+            ListNode spot = null;
+            while (current.next != null) {
+                if (current.next.getData().getFname().equalsIgnoreCase(name)) {
+                    spot = current;
+                }
+                current = current.next;
+            }
+            if (spot != null) {
+                spot.next = spot.next.next;
+            } else if (front.getData().getFname().equalsIgnoreCase(name)) {
+                front = front.next;
+            }
+        }
+    }
     public String toString(){
         if(front == null){
             return "[]";
