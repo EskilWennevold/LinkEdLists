@@ -17,19 +17,15 @@ public class ListNode {
     public Player getData() {
         return data;
     }
-
     public void setData(Player player) {
         this.data = player;
     }
-
     public ListNode getNext() {
         return next;
     }
-
     public void setNext(ListNode next) {
         this.next = next;
     }
-
     public String toString() {
         return data.toString();
 

@@ -20,7 +20,6 @@ public class MyLinkedList {
             current = current.next;
         }
     }
-
     public void getPlayer(String f){
         if(front != null){
             if(front.getData().getFname().equalsIgnoreCase(f)){
@@ -46,7 +45,6 @@ public class MyLinkedList {
             current.setNext(new ListNode(player));
         }
     }
-
     public void remove(String name){
         if(front != null) {
             ListNode current = front;
@@ -78,7 +76,6 @@ public class MyLinkedList {
             return result;
         }
     }
-
     public void getInterval(int minAge, int maxAge) {
         if(front.getData().getAge() >= minAge && front.getData().getAge() <= maxAge){
             System.out.println(front.getData().getFname() + " " + front.getData().getLname() + " " + front.getData().getAge());
